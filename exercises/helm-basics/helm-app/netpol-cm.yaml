@@ -3,12 +3,19 @@ apiVersion: cilium.io/v2
 kind: CiliumNetworkPolicy
 metadata:
   name: allow-acme-challenge
-  # TODO: fill in
-  namespace: ""
+  namespace: "fundamentals-training"
 spec:
   endpointSelector:
     matchExpressions:
       - key: acme.cert-manager.io/http01-solver
         operator: Exists
-  # TODO: fill in
   ingress:
+    - fromEndpoints:
+        - matchLabels:
+            io.kubernetes.pod.namespace: guida-ingress-nginx
+            app.kubernetes.io/component: controller
+            app.kubernetes.io/instance: ingress-nginx
+            app.kubernetes.io/name: ingress-nginx
+      toPorts:
+        - ports:
+            - port: "8089"
