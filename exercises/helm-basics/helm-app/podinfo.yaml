@@ -2,7 +2,7 @@
 replicaCount: 2
 logLevel: debug
 ui:
-  message: "Hello Ties"
+  message: "Hello tiesmaster"
 
 serviceMonitor:
   enabled: false
@@ -25,7 +25,7 @@ ingress:
     cert-manager.io/cluster-issuer: letsencrypt-production
     kubernetes.io/ingress.class: nginx
   hosts:
-    - host: &host ties.dev.iks.guida.io
+    - host: &host tiesmaster.dev.iks.guida.io
       paths:
         - path: /
           pathType: ImplementationSpecific
