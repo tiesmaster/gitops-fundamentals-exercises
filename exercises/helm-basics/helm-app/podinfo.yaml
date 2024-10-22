@@ -1,5 +1,5 @@
 ---
-replicaCount: 1
+replicaCount: 2
 logLevel: debug
 ui:
   message: "Hello Ties"
