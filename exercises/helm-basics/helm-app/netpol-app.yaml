@@ -3,12 +3,11 @@ apiVersion: cilium.io/v2
 kind: CiliumNetworkPolicy
 metadata:
   name: podinfo
-  # TODO: fill in
-  namespace: ""
+  namespace: "fundamentals-training"
 spec:
   endpointSelector:
     matchLabels:
-      # TODO: fill in
+      app.kubernetes.io/name: podinfo
   ingress:
     - fromEndpoints:
         - matchLabels:
