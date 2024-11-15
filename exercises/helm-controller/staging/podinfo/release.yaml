@@ -15,6 +15,7 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: podinfo
+        namespace: fundamentals-training
   values:
     # Default values for podinfo.
     replicaCount: 1
