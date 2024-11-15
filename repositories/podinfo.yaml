@@ -6,5 +6,5 @@ metadata:
   namespace: flux-system
 spec:
   interval: 1m0s
-  type: "OCI"
+  type: "oci"
   url: oci://ghcr.io/stefanprodan/modules/podinfo
