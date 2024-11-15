@@ -7,6 +7,9 @@ spec:
   replicas: 3
   template:
     spec:
+      topologySpreadConstraints:
+        - maxSkew: 1
+          topologyKey: topology.kubernetes.io/zone
       containers:
         - name: podinfod
           env:
